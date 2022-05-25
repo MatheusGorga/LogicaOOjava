@@ -57,9 +57,12 @@ public abstract class Animal implements Animavel{
 	
 	
 	// abstração da classe para que o animal em questão emita o som devido e não algo fixo
+	@Override
 	public abstract void emitirBarulho();
 	
 	
+	// se uma classe for removida da abstração nao ocorre erro na compilação mas na classe filha sim! pq não esta seguindo o contrato
+	@Override
 	public Boolean ehAdulto() {
 		if(estaVivo) {
 			return idade >= 1;
@@ -69,6 +72,7 @@ public abstract class Animal implements Animavel{
 	}
 	
 	// atributo final impede que uma classe seja sobrescrita mesmo com override
+	@Override //Override inserido por preferencia para dizer que tem algo por cima no caso a interface
 	public final void morrer() {
 		this.estaVivo = false;
 	}
