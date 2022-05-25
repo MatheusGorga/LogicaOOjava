@@ -1,6 +1,6 @@
 package br.com.treinaweb.oo.classes;
 
-public abstract class Animal {
+public abstract class Animal implements Animavel{
 	private String nome;
 	private String especie; 
 	protected int idade;
