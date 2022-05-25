@@ -4,6 +4,7 @@ public abstract class Animal {
 	private String nome;
 	private String especie; 
 	private int idade;
+	private Boolean estaVivo;
 	
 	
 	public String getNome() {
@@ -32,17 +33,25 @@ public abstract class Animal {
 	}
 	
 	
+	// Atributos booleanos nao tem o costume de ter get na frente
+	public Boolean estaVivo() {
+		return estaVivo;
+	}
+
+	
+
 	// criação do contrutor para não utilizar o default, com parametros... 
 	public Animal (String nome, int idade, String especie) {
 		this.nome = nome;
 		this.idade = idade;
 		this.especie = especie;
+		this.estaVivo = true;
 	}
 	
 	// Sobrecarga de classes || assinatura é o tipo dos parametros
 	public Animal (String nome) {
 		this.nome = nome;
-		
+		this.estaVivo = true;
 	}
 	
 	
@@ -50,9 +59,16 @@ public abstract class Animal {
 	public abstract void emitirBarulho();
 	
 	public Boolean ehAdulto() {
-		return idade >= 1;
+		if(estaVivo) {
+			return idade >= 1;
+		}else {
+			return false;
+		}
 	}
 	
+	public void morrer() {
+		this.estaVivo = false;
+	}
 	
 	
 	
