@@ -3,7 +3,7 @@ package br.com.treinaweb.oo.classes;
 public abstract class Animal {
 	private String nome;
 	private String especie; 
-	private int idade;
+	protected int idade;
 	// protected = utilizado para proteger o atributo, fazendo com que somente a classe mae e filha possam acessar
 	protected Boolean estaVivo;
 	

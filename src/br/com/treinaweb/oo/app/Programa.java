@@ -8,10 +8,11 @@ public class Programa {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Cachorro cachorro = new Cachorro("toto", 5 , "Cachorro");
+		Cachorro cachorro = new Cachorro("toto", 2 , "Cachorro");
 		
 		System.out.println("ola seu animal e um " + cachorro.getEspecie() + " nome e "  + cachorro.getNome()
 				+ " a idade e " + cachorro.getIdade() + " anos");
+		
 		if(cachorro.ehAdulto()){
 			System.out.println("Animal adulto");
 		}else {
@@ -21,19 +22,18 @@ public class Programa {
 		
 		System.out.println("--------------------------------------------------");
 		
-		Gato gato = new Gato("Frajola", 2, "Gato");
+		Gato gato = new Gato("Frajola", 1, "Gato");
 		
 		System.out.println("ola seu animal e um " + gato.getEspecie() + " nome e "  + gato.getNome()
 		+ " a idade e " + gato.getIdade() + " anos");
 		
-		gato.morrer();
 		
 		if(gato.ehAdulto()){
 			System.out.println("Animal adulto");
 		}else {
 			System.out.println("Animal jovem");
 		}
-		
+		gato.morrer();
 		gato.emitirBarulho();
 		
 		

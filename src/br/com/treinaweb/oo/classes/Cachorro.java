@@ -16,6 +16,17 @@ public class Cachorro  extends Animal {
 		super(nome, idade, "Cachorro");
 		// TODO Auto-generated constructor stub
 	}
+	
+	@Override
+	public Boolean ehAdulto() {
+		if(estaVivo) {
+			return idade >= 2;
+		}else {
+			return false;
+		}
+	}
+	
+	
 
 	// utilização da classe abstrata para emissão do barulho
 	@Override
