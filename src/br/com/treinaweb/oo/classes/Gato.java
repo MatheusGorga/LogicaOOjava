@@ -16,7 +16,11 @@ public class Gato extends Animal {
 	@Override
 	public void emitirBarulho() {
 		// TODO Auto-generated method stub
-		System.out.println("Miado");
+		if( estaVivo) {
+			System.out.println("Miado");
+		}else {
+			System.out.println("O animal faleceu");
+		}
 		
 	}
 	

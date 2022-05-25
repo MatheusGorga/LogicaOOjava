@@ -21,11 +21,14 @@ public class Programa {
 		
 		System.out.println("--------------------------------------------------");
 		
-		Gato gato = new Gato("Frajola", 0, "Gato");
+		Gato gato = new Gato("Frajola", 2, "Gato");
+		
 		System.out.println("ola seu animal e um " + gato.getEspecie() + " nome e "  + gato.getNome()
 		+ " a idade e " + gato.getIdade() + " anos");
 		
-		if(gato.ehAdulto()){
+		gato.morrer();
+		
+		if(gato.ehAdulto() || gato.estaVivo() ){
 			System.out.println("Animal adulto");
 		}else {
 			System.out.println("Animal jovem");

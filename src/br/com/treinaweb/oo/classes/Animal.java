@@ -4,7 +4,8 @@ public abstract class Animal {
 	private String nome;
 	private String especie; 
 	private int idade;
-	private Boolean estaVivo;
+	// protected = utilizado para proteger o atributo, fazendo com que somente a classe mae e filha possam acessar
+	protected Boolean estaVivo;
 	
 	
 	public String getNome() {
@@ -57,6 +58,7 @@ public abstract class Animal {
 	
 	// abstração da classe para que o animal em questão emita o som devido e não algo fixo
 	public abstract void emitirBarulho();
+	
 	
 	public Boolean ehAdulto() {
 		if(estaVivo) {

@@ -21,7 +21,11 @@ public class Cachorro  extends Animal {
 	@Override
 	public void emitirBarulho() {
 		// TODO Auto-generated method stub
-		System.out.println("latido");
+		if( estaVivo) {
+			System.out.println("latido");
+		}else {
+			System.out.println("O animal faleceu");
+		}
 		
 	}
 
