@@ -68,7 +68,8 @@ public abstract class Animal {
 		}
 	}
 	
-	public void morrer() {
+	// atributo final impede que uma classe seja sobrescrita mesmo com override
+	public final void morrer() {
 		this.estaVivo = false;
 	}
 	

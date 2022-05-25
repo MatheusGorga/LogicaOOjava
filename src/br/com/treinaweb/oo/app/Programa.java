@@ -28,7 +28,7 @@ public class Programa {
 		
 		gato.morrer();
 		
-		if(gato.ehAdulto() || gato.estaVivo() ){
+		if(gato.ehAdulto()){
 			System.out.println("Animal adulto");
 		}else {
 			System.out.println("Animal jovem");
