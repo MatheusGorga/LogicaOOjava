@@ -4,6 +4,7 @@ package br.com.treinaweb.oo.app;
 import br.com.treinaweb.oo.classes.Animal;
 import br.com.treinaweb.oo.classes.Cachorro;
 import br.com.treinaweb.oo.classes.Gato;
+import br.com.treinaweb.oo.classes.Veterinario;
 import br.com.treinaweb.oo.classes.Zoologico;
 
 public class Programa {
@@ -39,8 +40,12 @@ public class Programa {
 		System.out.println("Animais do Zoologico - " + zoo.getNome());
 		zoo.listarAnimais();
 		
+		System.out.println("--------------------------------------------------");
 		
-		
+		Veterinario vet = new Veterinario();
+		vet.setNome("olaf");
+		vet.atenderAnimal(animal2);
+		vet.listarAnimais();
 		
 	}
 
