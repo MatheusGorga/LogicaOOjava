@@ -1,40 +1,45 @@
 package br.com.treinaweb.oo.app;
 
 
+import br.com.treinaweb.oo.classes.Animal;
 import br.com.treinaweb.oo.classes.Cachorro;
 import br.com.treinaweb.oo.classes.Gato;
+import br.com.treinaweb.oo.classes.Zoologico;
 
 public class Programa {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Cachorro cachorro = new Cachorro("toto", 2 , "Cachorro");
+		Animal animal = new Cachorro("toto", 2 , "Cachorro");
 		
-		System.out.println("ola seu animal e um " + cachorro.getEspecie() + " nome e "  + cachorro.getNome()
-				+ " a idade e " + cachorro.getIdade() + " anos");
+		System.out.println("ola seu animal e um " + animal.getEspecie() + " nome e "  + animal.getNome()
+				+ " a idade e " + animal.getIdade() + " anos");
 		
-		if(cachorro.ehAdulto()){
+		if(animal.ehAdulto()){
 			System.out.println("Animal adulto");
 		}else {
 			System.out.println("Animal jovem");
 		}
-		cachorro.emitirBarulho();
+		animal.emitirBarulho();
 		
 		System.out.println("--------------------------------------------------");
 		
-		Gato gato = new Gato("Frajola", 1, "Gato");
+		Zoologico zoo = new Zoologico();
+		zoo.setNome("zOOlogica");
+		zoo.addAnimal(animal);
+		Animal animal2 = new Gato("Ze", 3);
+		zoo.addAnimal(animal2);
+		System.out.println("Animais do Zoologico - " + zoo.getNome());
+		zoo.listarAnimais();
 		
-		System.out.println("ola seu animal e um " + gato.getEspecie() + " nome e "  + gato.getNome()
-		+ " a idade e " + gato.getIdade() + " anos");
+		zoo.removeAnimal(0);
+		
+		System.out.println("--------------------------------------------------");
+		
+		System.out.println("Animais do Zoologico - " + zoo.getNome());
+		zoo.listarAnimais();
 		
 		
-		if(gato.ehAdulto()){
-			System.out.println("Animal adulto");
-		}else {
-			System.out.println("Animal jovem");
-		}
-		gato.morrer();
-		gato.emitirBarulho();
 		
 		
 	}

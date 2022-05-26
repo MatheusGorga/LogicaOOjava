@@ -11,6 +11,11 @@ public class Gato extends Animal {
 		super(nome);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Gato(String nome, int idade) {
+		super(nome, idade, "gato");
+		// TODO Auto-generated constructor stub
+	}
 
 	// utilização da classe abstrata para emissão do barulho
 	@Override
